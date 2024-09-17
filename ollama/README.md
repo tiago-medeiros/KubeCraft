@@ -2,6 +2,14 @@
 
 Ollama experiments and notes
 
+# Local Configuration
+
+Add this configuration in /etc/hosts
+
+```
+echo "127.0.0.1 ollama.localhost" > /etc/hosts
+``` 
+
 
 # Kubernetes
 
