@@ -11,7 +11,7 @@ ollama:
 
   # -- List of models to pull at container startup
   models:
-    - llama2
+    - llama3.1
 
 ingress:
   enabled: true
