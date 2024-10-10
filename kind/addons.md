@@ -1,12 +1,22 @@
 # Kind Addons
 
-#### Enable GPU support
+## Enable GPU support
 [Nvidia toolkit setup](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+
+#### Install NVIDIA container toolkit on Arch
+
+```
+sudo pacman -S nvidia-container-toolkit
+```
 
 #### Configure NVIDIA
 ```
 sudo nvidia-ctk runtime configure --runtime=docker --set-as-default
+
+sudo systemctl daemon-reload
+
 sudo systemctl restart docker
+
 sudo sed -i '/accept-nvidia-visible-devices-as-volume-mounts/c\accept-nvidia-visible-devices-as-volume-mounts = true' /etc/nvidia-container-runtime/config.toml
 
 ```
